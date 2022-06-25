@@ -1,5 +1,5 @@
 import { Box, Divider, Heading } from "@chakra-ui/react";
-import { Banner } from "../../components/Banner";
+import { Banner } from "../../components/BannerHome";
 import { ContainerSlide } from "../../components/ContainerSlide";
 import { Header } from "../../components/Header";
 import { TravelTypes } from "../../components/TravelTypes";
@@ -9,7 +9,7 @@ export function Home() {
     <Box>
       <Header />
       <Banner />
-      <TravelTypes />
+      <TravelTypes mx={"140px"} mt={"80px"} />
       <Divider mt={"80px"} mb={"52px"} />
       <Heading
         fontWeight={"500px"}
@@ -22,7 +22,7 @@ export function Home() {
         Vamos nessa? <br></br> Então escolha seu continente
       </Heading>
 
-      <ContainerSlide />
+      <ContainerSlide mb={"40px"} mx="100px" />
     </Box>
   );
 }

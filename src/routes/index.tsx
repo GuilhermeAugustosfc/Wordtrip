@@ -3,6 +3,7 @@ import {
   Routes as Switch, // instead of "Switch"
   Route,
 } from "react-router-dom";
+import { Continente } from "../pages/Continente";
 import { Home } from "../pages/Home";
 
 export function Routes() {
@@ -10,6 +11,7 @@ export function Routes() {
     <BrowserRouter>
       <Switch>
         <Route path="/" element={<Home />} />
+        <Route path="/continente/:continent" element={<Continente />} />
       </Switch>
     </BrowserRouter>
   );

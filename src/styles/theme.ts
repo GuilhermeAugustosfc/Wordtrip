@@ -6,7 +6,6 @@ export const theme = extendTheme({
   },
   colors: {
     highlight: "#FFBA08",
-    gui: "#ffff",
     // dark mod
     darkBlack: "#000000",
     darkHeadingAndText: "#47585B",

@@ -13,9 +13,11 @@ import europePath from "../../assets/europe.jpg";
 import asiaPath from "../../assets/asia.jpg";
 import oceaniaPath from "../../assets/oceania.jpg";
 import africaPath from "../../assets/africa.jpg";
-import { Box } from "@chakra-ui/react";
+import { Box, SpaceProps } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
 
-export function ContainerSlide() {
+export function ContainerSlide({ ...rest }: SpaceProps) {
+  const navigate = useNavigate();
   const pagination = {
     clickable: true,
     renderBullet: function (index: number, className: string) {
@@ -23,14 +25,25 @@ export function ContainerSlide() {
     },
   };
 
+  const continentesMap = [
+    "europe",
+    "shoutAmerica",
+    "africa",
+    "asia",
+    "nothAmerica",
+    "oceania",
+  ];
+
   return (
-    <Box mb={"40px"} mx="100px">
+    <Box {...rest}>
       <Swiper
         navigation={true}
         pagination={pagination}
         modules={[Navigation, Pagination]}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
+        onClick={({ activeIndex }) => {
+          const continentSelect = continentesMap[activeIndex];
+          navigate(`/continente/${continentSelect}`);
+        }}
       >
         <SwiperSlide>
           <Slides

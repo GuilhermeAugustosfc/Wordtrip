@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
+import { Flex, Heading, Image, Text, VStack } from "@chakra-ui/react";
 interface SlidesProps {
   pathContinents: string;
   title: string;
@@ -6,7 +6,12 @@ interface SlidesProps {
 }
 export function Slides({ title, pathContinents, subtitle }: SlidesProps) {
   return (
-    <Flex justifyContent="center" alignItems={"center"} position={"relative"}>
+    <Flex
+      cursor={"pointer"}
+      justifyContent="center"
+      alignItems={"center"}
+      position={"relative"}
+    >
       <Image
         height={"450px"}
         width={"100%"}
@@ -16,12 +21,7 @@ export function Slides({ title, pathContinents, subtitle }: SlidesProps) {
         backgroundSize={"cover"}
         filter={"brightness(0.6)"}
       />
-      <Flex
-        flexDirection={"column"}
-        gap="16px"
-        textAlign={"center"}
-        position={"absolute"}
-      >
+      <VStack gap="16px" textAlign={"center"} position={"absolute"}>
         <Heading
           fontWeight={700}
           fontSize={"48px"}
@@ -40,7 +40,7 @@ export function Slides({ title, pathContinents, subtitle }: SlidesProps) {
         >
           {subtitle}
         </Text>
-      </Flex>
+      </VStack>
     </Flex>
   );
 }

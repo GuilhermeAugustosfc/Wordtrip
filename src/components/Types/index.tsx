@@ -1,4 +1,4 @@
-import { Flex, Image, Text } from "@chakra-ui/react";
+import { Flex, Image, Text, VStack } from "@chakra-ui/react";
 
 interface TypesProps {
   text: string;
@@ -6,12 +6,7 @@ interface TypesProps {
 }
 export function Types({ text, svgPath }: TypesProps) {
   return (
-    <Flex
-      flexDirection={"column"}
-      gap={"24px"}
-      justifyContent={"center"}
-      alignItems="center"
-    >
+    <VStack gap={"24px"} justifyContent={"center"} alignItems="center">
       <Image w={"85px"} h={"85px"} src={svgPath} />
       <Text
         fontWeight={600}
@@ -22,6 +17,6 @@ export function Types({ text, svgPath }: TypesProps) {
       >
         {text}
       </Text>
-    </Flex>
+    </VStack>
   );
 }
