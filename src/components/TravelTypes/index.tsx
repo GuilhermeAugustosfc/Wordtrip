@@ -17,12 +17,12 @@ export function TravelTypes({ isWideVersion, ...rest }: TravelTypes) {
       {...rest}
       justifyContent={{
         lg: "space-between",
-        sm: "center",
+        base: "center",
       }}
       gap={"28px"}
       flexWrap="wrap"
       width={{
-        sm: "65%",
+        base: "65%",
         lg: "100%",
       }}
     >

@@ -13,7 +13,7 @@ export function Header({ backButton = false, isWideVersion }: HeaderProps) {
     <Flex
       px={{
         md: "140px",
-        sm: buttonBack ? "16px" : "147px",
+        base: buttonBack ? "16px" : "147px",
       }}
       my={"6"}
       alignItems="center"

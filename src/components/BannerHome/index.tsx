@@ -9,15 +9,15 @@ export function Banner({ isWideVersion, ...rest }: BannerProps) {
       <Flex
         backgroundImage={"url(/src/assets/background.png)"}
         px={{
-          sm: "16px",
+          base: "16px",
           lg: "32",
         }}
         pt={{
           lg: "20",
-          sm: "28px",
+          base: "28px",
         }}
         pb={{
-          sm: "28px",
+          base: "28px",
         }}
         backgroundPosition="center"
         backgroundRepeat="no-repeat"
@@ -31,16 +31,19 @@ export function Banner({ isWideVersion, ...rest }: BannerProps) {
             fontSize={"36px"}
             lineHeight={"54px"}
             color={"lightHeadingAndText"}
-            w={{ sm: "100%" }}
+            w={{ base: "100%" }}
           >
             5 Continentes,
             <br /> infinitas possibilidades.
           </Heading>
           <Text
-            w={"524px"}
+            w={{
+              lg: "524px",
+              base: "auto",
+            }}
             fontWeight={400}
             fontSize={"20px"}
-            lineHeight={{ sm: "36px", lg: "20px" }}
+            lineHeight={{ base: "36px", lg: "20px" }}
             color={"lightInfo"}
           >
             Chegou a hora de tirar do papel a viagem que você sempre sonhou.{" "}

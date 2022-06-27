@@ -10,7 +10,7 @@ export function Types({ text, svgPath }: TypesProps) {
     <Flex
       flexDir={{
         lg: "column",
-        sm: "row",
+        base: "row",
       }}
       gap={"24px"}
       justifyContent={"center"}
@@ -19,11 +19,11 @@ export function Types({ text, svgPath }: TypesProps) {
       <Image
         w={{
           lg: "85px",
-          sm: "8px",
+          base: "8px",
         }}
         h={{
           lg: "85px",
-          sm: "8px",
+          base: "8px",
         }}
         src={svgPath}
       />

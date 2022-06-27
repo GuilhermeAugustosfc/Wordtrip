@@ -37,11 +37,20 @@ export function Continente() {
         continentTitle={continenteData[continent].title}
         isWideVersion={isWideVersion}
       />
-      <Box mt="80px" px="140px">
+      <Box
+        mt={{
+          lg: "80px",
+          base: "36px",
+        }}
+        px={{
+          lg: "140px",
+          base: "16px",
+        }}
+      >
         <Flex
           gap={"70px"}
           flexWrap={{
-            sm: "wrap",
+            base: "wrap",
             lg: "nowrap",
           }}
         >

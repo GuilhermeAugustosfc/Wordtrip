@@ -28,7 +28,7 @@ export function BannerContinente({
       <Image
         maxH={{
           lg: "500px",
-          sm: "260px",
+          base: "260px",
         }}
         src={`/src/assets/${continentImagePath}.jpg`}
         backgroundPosition="center"

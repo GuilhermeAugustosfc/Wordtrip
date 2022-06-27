@@ -35,7 +35,7 @@ export function CardCity({ cards, ...rest }: CardCityProps) {
         flexWrap="wrap"
         justifyContent={{
           lg: "space-between",
-          sm: "center",
+          base: "center",
         }}
       >
         {cards.map((card, i) => (

@@ -27,7 +27,17 @@ export function InfoCity({ countryQtd, cityQtd, linguaQtd }: InfoCityProps) {
   }
 
   return (
-    <Flex alignItems={"center"} gap={"42px"}>
+    <Flex
+      flexDir={{
+        // base: "column",
+        lg: "row",
+      }}
+      alignItems={"center"}
+      gap={{
+        lg: "42px",
+        base: "12px",
+      }}
+    >
       <InfoLabel value={countryQtd} info={"Paises"} />
       <InfoLabel value={linguaQtd} info={"Linguas"} />
       <InfoLabel value={cityQtd} info={"Cidades"} />

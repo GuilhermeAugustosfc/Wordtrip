@@ -16,25 +16,25 @@ export function Home() {
       <Banner
         h={{
           lg: "368px",
-          sm: "auto",
+          base: "auto",
         }}
-        w={["fit-content", "full"]}
+        w={["auto", "full"]}
         isWideVersion={isWideVersion}
       />
       <TravelTypes
         isWideVersion={isWideVersion}
-        mx={{ sm: "auto", lg: "140px" }}
-        mt={{ sm: "36px", lg: "80px" }}
+        mx={{ base: "auto", lg: "140px" }}
+        mt={{ base: "36px", lg: "80px" }}
       />
       <Divider
         mt={"80px"}
         mb={"52px"}
         width={{
-          sm: "60px",
+          base: "60px",
           lg: "100%",
         }}
         mx={{
-          sm: "auto",
+          base: "auto",
         }}
       />
       <Heading
@@ -52,7 +52,7 @@ export function Home() {
         mb={"40px"}
         mx={{
           lg: "100px",
-          sm: "0",
+          base: "0",
         }}
       />
     </Box>

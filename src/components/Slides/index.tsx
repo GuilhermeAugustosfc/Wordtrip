@@ -15,7 +15,7 @@ export function Slides({ title, pathContinents, subtitle }: SlidesProps) {
       <Image
         height={{
           lg: "450px",
-          sm: "250px",
+          base: "250px",
         }}
         width={"100%"}
         src={pathContinents}
@@ -29,7 +29,7 @@ export function Slides({ title, pathContinents, subtitle }: SlidesProps) {
           fontWeight={700}
           fontSize={{
             lg: "48px",
-            sm: "24px",
+            base: "24px",
           }}
           lineHeight={"72px"}
           textAlign={"center"}
@@ -41,7 +41,7 @@ export function Slides({ title, pathContinents, subtitle }: SlidesProps) {
           fontWeight={"700"}
           fontSize={{
             lg: "24px",
-            sm: "14px",
+            base: "14px",
           }}
           lineHeight={"36px"}
           textAlign={"center"}
