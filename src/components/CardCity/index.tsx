@@ -24,15 +24,27 @@ export function CardCity({ cards, ...rest }: CardCityProps) {
         fontWeight={"500"}
         fontSize={"36px"}
         lineHeight={"54px"}
-        textAlign={"right"}
+        textAlign={"left"}
         color={"darkHeadingText"}
         mb={"40px"}
       >
         Cidades +100
       </Heading>
-      <Flex gap={"45px"} flexWrap="wrap" justifyContent={"space-between"}>
+      <Flex
+        gap={"45px"}
+        flexWrap="wrap"
+        justifyContent={{
+          lg: "space-between",
+          sm: "center",
+        }}
+      >
         {cards.map((card, i) => (
-          <VStack borderRadius={"4px 4px 4px 4px"} key={i}>
+          <Flex
+            flexDir={"column"}
+            borderRadius={"4px"}
+            backgroundColor="lightWhite"
+            key={i}
+          >
             <Image
               borderRadius={"4px 4px 0 0"}
               width={"256px"}
@@ -46,7 +58,12 @@ export function CardCity({ cards, ...rest }: CardCityProps) {
               backgroundColor={"lightWhite"}
               width={"100%"}
               justifyContent={"space-between"}
+              borderColor="highlight"
+              borderLeftWidth={"1px"}
+              borderRightWidth={"1px"}
+              borderBottomWidth={"1px"}
               alignItems={"center"}
+              margin={"auto"}
             >
               <VStack gap={"12px"}>
                 <Text
@@ -76,7 +93,7 @@ export function CardCity({ cards, ...rest }: CardCityProps) {
                 src={`/src/assets/${card.countryImagePath}.jpg`}
               />
             </Flex>
-          </VStack>
+          </Flex>
         ))}
       </Flex>
     </Box>

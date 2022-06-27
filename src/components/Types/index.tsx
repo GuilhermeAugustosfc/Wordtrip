@@ -4,10 +4,29 @@ interface TypesProps {
   text: string;
   svgPath: string;
 }
+
 export function Types({ text, svgPath }: TypesProps) {
   return (
-    <VStack gap={"24px"} justifyContent={"center"} alignItems="center">
-      <Image w={"85px"} h={"85px"} src={svgPath} />
+    <Flex
+      flexDir={{
+        lg: "column",
+        sm: "row",
+      }}
+      gap={"24px"}
+      justifyContent={"center"}
+      alignItems="center"
+    >
+      <Image
+        w={{
+          lg: "85px",
+          sm: "8px",
+        }}
+        h={{
+          lg: "85px",
+          sm: "8px",
+        }}
+        src={svgPath}
+      />
       <Text
         fontWeight={600}
         fontSize={"24px"}
@@ -17,6 +36,6 @@ export function Types({ text, svgPath }: TypesProps) {
       >
         {text}
       </Text>
-    </VStack>
+    </Flex>
   );
 }

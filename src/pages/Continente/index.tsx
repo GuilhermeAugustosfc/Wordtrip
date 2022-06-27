@@ -1,4 +1,4 @@
-import { Box, Flex } from "@chakra-ui/react";
+import { Box, Flex, useBreakpointValue } from "@chakra-ui/react";
 import { Navigate, useParams } from "react-router-dom";
 import { BannerContinente } from "../../components/BannerContinente";
 import { Biography } from "../../components/Biography";
@@ -18,19 +18,33 @@ export function Continente() {
       | "nothAmerica";
   }>();
 
+  const isWideVersion = useBreakpointValue({
+    base: false,
+    lg: true,
+  });
+
+  // ATENTADO DA MANOS FACA
+
   if (!continent) {
     return <Navigate to={"/"} />;
   }
 
   return (
     <Box>
-      <Header backButton />
+      <Header backButton isWideVersion={isWideVersion} />
       <BannerContinente
         continentImagePath={continenteData[continent].banner.path}
         continentTitle={continenteData[continent].title}
+        isWideVersion={isWideVersion}
       />
       <Box mt="80px" px="140px">
-        <Flex gap={"70px"}>
+        <Flex
+          gap={"70px"}
+          flexWrap={{
+            sm: "wrap",
+            lg: "nowrap",
+          }}
+        >
           <Biography text={continenteData[continent].info.bio} />
           <InfoCity
             linguaQtd={continenteData[continent].info.linguaQtd}
@@ -39,7 +53,11 @@ export function Continente() {
           />
         </Flex>
 
-        <CardCity mt={"80px"} cards={continenteData[continent].city} />
+        <CardCity
+          mb="35px"
+          mt={"80px"}
+          cards={continenteData[continent].city}
+        />
       </Box>
     </Box>
   );

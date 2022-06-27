@@ -1,22 +1,31 @@
 import { Box, Flex, Image } from "@chakra-ui/react";
 import logo from "../../assets/logo.svg";
-import buttonBack from "../../assets/buttonBack.svg";
+import buttonBack from "../../assets/button-back.svg";
+import buttonBackMobile from "../../assets/button-back-mobile.svg";
 import { useNavigate } from "react-router-dom";
 interface HeaderProps {
   backButton?: boolean;
+  isWideVersion?: boolean;
 }
-export function Header({ backButton = false }: HeaderProps) {
+export function Header({ backButton = false, isWideVersion }: HeaderProps) {
   const navigate = useNavigate();
   return (
-    <Flex px="140px" my={"6"} alignItems="center">
+    <Flex
+      px={{
+        md: "140px",
+        sm: buttonBack ? "16px" : "147px",
+      }}
+      my={"6"}
+      alignItems="center"
+    >
       {backButton && (
         <Image
           cursor={"pointer"}
-          src={buttonBack}
+          src={isWideVersion ? buttonBack : buttonBackMobile}
           onClick={() => navigate("/")}
         />
       )}
-      <Image display={"block"} margin="0 auto" src={logo} />
+      <Image fontSize={["20"]} display={"block"} margin="0 auto" src={logo} />
     </Flex>
   );
 }

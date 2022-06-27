@@ -13,7 +13,10 @@ export function Slides({ title, pathContinents, subtitle }: SlidesProps) {
       position={"relative"}
     >
       <Image
-        height={"450px"}
+        height={{
+          lg: "450px",
+          sm: "250px",
+        }}
         width={"100%"}
         src={pathContinents}
         backgroundPosition="center"
@@ -24,7 +27,10 @@ export function Slides({ title, pathContinents, subtitle }: SlidesProps) {
       <VStack gap="16px" textAlign={"center"} position={"absolute"}>
         <Heading
           fontWeight={700}
-          fontSize={"48px"}
+          fontSize={{
+            lg: "48px",
+            sm: "24px",
+          }}
           lineHeight={"72px"}
           textAlign={"center"}
           color={"lightHeadingAndText"}
@@ -33,7 +39,10 @@ export function Slides({ title, pathContinents, subtitle }: SlidesProps) {
         </Heading>
         <Text
           fontWeight={"700"}
-          fontSize={"24px"}
+          fontSize={{
+            lg: "24px",
+            sm: "14px",
+          }}
           lineHeight={"36px"}
           textAlign={"center"}
           color={"info"}
